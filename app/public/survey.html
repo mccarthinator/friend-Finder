@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- linking -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Chosen (what the hw example uses) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -29,8 +38,8 @@
     <!-- 10 questions start here -->
     <div class="form-group">
         <h3>Question 1</h3>
-        <label for="exampleSelect1">You enjoy a high quality chat.</label>
-        <select class="form-control" id="q1">
+        <label for="q1">You enjoy a high quality chat.</label>
+        <select class="form-control" datawidth="auto" id="q1">
         <option value="1">1 (strongly NOPE)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -40,8 +49,8 @@
     </div>
     <div class="form-group">
         <h3>Question 2</h3>
-        <label for="exampleSelect1">Your face isn't the worst.</label>
-        <select class="form-control" id="q2">
+        <label for="q2">Your face isn't the worst.</label>
+        <select class="form-control" datawidth="auto" id="q2">
         <option value="1">1 (strongly NOPE)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -51,8 +60,8 @@
     </div>
     <div class="form-group">
         <h3>Question 3</h3>    
-        <label for="exampleSelect1">Some have called you "real weird".</label>
-        <select class="form-control" id="q3">
+        <label for="q3">Some have called you "real weird".</label>
+        <select class="form-control" datawidth="auto" id="q3">
         <option value="1">1 (strongly NOPE)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -62,8 +71,8 @@
     </div>
     <div class="form-group">
         <h3>Question 4</h3>
-        <label for="exampleSelect1">Your grandma is your biggest fan.</label>
-        <select class="form-control" id="q4">
+        <label for="q4">Your grandma is your biggest fan.</label>
+        <select class="form-control" datawidth="auto" id="q4">
         <option value="1">1 (strongly NOPE)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -73,8 +82,8 @@
     </div>
     <div class="form-group">
         <h3>Question 5</h3>
-        <label for="exampleSelect1">You are a vampire.</label>
-        <select class="form-control" id="q5">
+        <label for="q5">You are a vampire.</label>
+        <select class="form-control" datawidth="auto" id="q5">
         <option value="1">1 (strongly NOPE)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -84,8 +93,8 @@
     </div>
     <div class="form-group">
         <h3>Question 6</h3>
-        <label for="exampleSelect1">You live in someone's basement.</label>
-        <select class="form-control" id="q6">
+        <label for="q6">You live in someone's basement.</label>
+        <select class="form-control" datawidth="auto" id="q6">
         <option value="1">1 (strongly NOPE)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -95,8 +104,8 @@
     </div>
     <div class="form-group">
         <h3>Question 7</h3>
-        <label for="exampleSelect1">Your middle name is Elmer.</label>
-        <select class="form-control" id="q7">
+        <label for="q7">Your middle name is Elmer.</label>
+        <select class="form-control" datawidth="auto" id="q7">
         <option>1 (strongly NOPE)</option>
         <option>2</option>
         <option>3</option>
@@ -106,8 +115,8 @@
     </div>
     <div class="form-group">
         <h3>Question 8</h3>
-        <label for="exampleSelect1">You've been called a hipster.</label>
-        <select class="form-control" id="q8">
+        <label for="q8">You've been called a hipster.</label>
+        <select class="form-control" datawidth="auto" id="q8">
         <option value="1">1 (strongly NOPE)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -117,8 +126,8 @@
     </div>
     <div class="form-group">
         <h3>Question 9</h3>
-        <label for="exampleSelect1">You don't know what a hipster is?</label>
-        <select class="form-control" id="q9">
+        <label for="q9">You don't know what a hipster is?</label>
+        <select class="form-control" datawidth="auto" id="q9">
         <option value="1">1 (strongly NOPE)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -128,8 +137,8 @@
     </div>
     <div class="form-group">
         <h3>Question 10</h3>
-        <label for="exampleSelect1">You have all your teeth.</label>
-        <select class="form-control" id="q10">
+        <label for="q10">You have all your teeth.</label>
+        <select class="form-control" datawidth="auto" id="q10">
         <option value="1">1 (strongly NOPE)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -152,7 +161,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Most Compatible Friend</h4>
+              <h4 class="modal-title">Most Compatible Friend:</h4>
             </div>
             <div class="modal-body">
               <h2 id="nameOfMatch"></h2>
@@ -165,6 +174,15 @@
       
         </div>
 </div>
+
+<script type= "text/javascript">
+
+
+
+
+
+
+</script>
 
 </body>
 </html>
