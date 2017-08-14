@@ -9,16 +9,18 @@ var path = require("path");
 
 // Routes
 
+var friends = require("../data/friends.js");
+
+////////////
+
 module.exports = function(app) {
   app.get('/survey', function (req, res) {
     res.sendFile(path.join(__dirname, "/../public/survey.html"));
   });
-  
-  app.use('/home', function (req, res) {
-      res.render('home', {
-          // superHeroList: superHeroList
+
+  app.use(function (req, res) {
+    res.sendFile(path.join(__dirname, "/../public/home.html"));
       });
-  });
-}
+};
 
 module.exports = defineHTMLRoutes;
