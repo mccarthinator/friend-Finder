@@ -177,8 +177,49 @@
 
 <script type= "text/javascript">
 
+///// function to take in user survey data once user hits submit /////
 
+$(".submit").on("click", function(event) {
+			event.preventDefault();
+			var q1 = parseInt($("#q1").val().trim());
+			var q2 = parseInt($("#q2").val().trim());
+			var q3 = parseInt($("#q3").val().trim());
+			var q4 = parseInt($("#q4").val().trim());
+			var q5 = parseInt($("#q5").val().trim());
+			var q6 = parseInt($("#q6").val().trim());
+			var q7 = parseInt($("#q7").val().trim());
+			var q8 = parseInt($("#q8").val().trim());
+			var q9 = parseInt($("#q9").val().trim());
+			var q10 = parseInt($("#q10").val().trim());
+        
+        newUser = {
+		name: $("#name").val().trim(),
+		photo: $("#photo").val().trim(),
+		scores:[]
+		}
 
+        newUserScore = newUser.scores
+	    newUserScore.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
+    
+        $.post("/api/friends", newUser, function(data) {
+		result = JSON.parse(data);
+		var $img = $("<img>", {src: result.photo, alt: result.name});
+		$("#matchbody").html(result.name).append("<br>").append($img);
+		//clear form
+		$("#name").val("");
+		$("#photo").val("");
+		$("#q1").val(0);
+		$("#q2").val(0);
+		$("#q3").val(0);
+		$("#q4").val(0);
+		$("#q5").val(0);
+		$("#q6").val(0);
+		$("#q7").val(0);
+		$("#q8").val(0);
+		$("#q9").val(0);
+		$("#q10").val(0);
+	});
+});
 
 
 
