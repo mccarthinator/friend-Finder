@@ -4,9 +4,8 @@ var friendsArray = require("../data/friends.js");
 
 module.exports = function(app) {
   
-  //return the friends array
+  //return friendsArray
   app.get("/api/friends", function(req, res){
     res.json(friendsArray);
   });
 
-  
