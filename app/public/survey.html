@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
 
+    <script src="https://code.jquery.com/jquery.js"></script>
     <!-- linking -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
+    
 
     <!-- Chosen (what the hw example uses) -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
@@ -19,23 +20,25 @@
 <body>
 
     <!--survey div -->
-<div class="container">
+    <div class="container">
     <h2>Survey Questions to Determine: Can This App Find You One Friend? (the CTAFYOF app).</h2>
 
+<form>
     <div class="form-group row">
         <label for="example-text-input" class="col-2 col-form-label">Name (required)</label>
         <div class="col-10">
-        <input class="form-control" type="text" value="" id="example-text-input">
+        <input class="form-control" type="text" value="" id="name">
         </div>
     </div>
     <div class="form-group row">
         <label for="example-url-input" class="col-2 col-form-label">Link to Photo (required)</label>
         <div class="col-10">
-        <input class="form-control" type="search" value="" id="example-url-input">
+        <input class="form-control" type="search" value="" id="photo">
         </div>
     </div>
             
     <!-- 10 questions start here -->
+    
     <div class="form-group">
         <h3>Question 1</h3>
         <label for="q1">You enjoy a high quality chat.</label>
@@ -152,6 +155,7 @@
     <br>
     <br>
 </div>
+</form>
 
 <!-- Modal -->
 <div id="friendModal" class="modal fade" role="dialog">
@@ -179,7 +183,7 @@
 
 ///// function to take in user survey data once user hits submit /////
 
-$(".submit").on("click", function(event) {
+$("#submit").on("click", function(event) {
 			event.preventDefault();
 			var q1 = parseInt($("#q1").val().trim());
 			var q2 = parseInt($("#q2").val().trim());
@@ -192,17 +196,16 @@ $(".submit").on("click", function(event) {
 			var q9 = parseInt($("#q9").val().trim());
 			var q10 = parseInt($("#q10").val().trim());
         
-        newUser = {
+       var newUser = {
 		name: $("#name").val().trim(),
 		photo: $("#photo").val().trim(),
 		scores:[]
-		}
+		};
 
-        newUserScore = newUser.scores
-	    newUserScore.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
+	    newUser.scores.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
     
         $.post("/api/friends", newUser, function(data) {
-		result = JSON.parse(data);
+		var result = JSON.parse(data);
 		var $img = $("<img>", {src: result.photo, alt: result.name});
 		$("#matchbody").html(result.name).append("<br>").append($img);
 		//clear form
