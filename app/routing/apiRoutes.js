@@ -9,3 +9,5 @@ module.exports = function(app) {
     res.json(friendsArray);
   });
 
+  app.post("/api/friends", function(req, res) {
+    var newUser = req.body;
