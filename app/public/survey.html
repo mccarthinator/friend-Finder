@@ -19,138 +19,137 @@
 </head>
 <body>
 
-    <!--survey div -->
-    <div class="container">
-    <h2>Survey Questions to Determine: Can This App Find You One Friend? (the CTAFYOF app).</h2>
 
-<form>
-    <div class="form-group row">
-        <label for="example-text-input" class="col-2 col-form-label">Name (required)</label>
-        <div class="col-10">
-        <input class="form-control" type="text" value="" id="name">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="example-url-input" class="col-2 col-form-label">Link to Photo (required)</label>
-        <div class="col-10">
-        <input class="form-control" type="search" value="" id="photo">
-        </div>
-    </div>
+
+<div class="container">
+
+
+        
+        <h2>Survey Questions to Determine: Can This App Find You One Friend? (the CTAFYOF app).</h2>
+        <hr>
+
+        <h3><strong>About You</strong></h3>
+        <h4>Name (Required)</h4>
+        <input type="text" name="" id="name" class="form-control" required="">
+
+        <h4>Link to Photo Image (Required)</h4>
+        <input type="text" name="" id="photo" class="form-control" required="">
+
+        <hr>
             
-    <!-- 10 questions start here -->
-    
-    <div class="form-group">
-        <h3>Question 1</h3>
-        <label for="q1">You enjoy a high quality chat.</label>
-        <select class="form-control" datawidth="auto" id="q1">
-        <option value="1">1 (strongly NOPE)</option>
+<div class="form-group">    
+<h3><strong>Question 1</strong></h3>
+<h4 id="q1">You enjoy a high quality chat.</h4>
+    <select data-placeholder="" class="chosen-select" id="q1" style="display: none;">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
-        <option value="5">5 (strongly YEP)</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <h3>Question 2</h3>
-        <label for="q2">Your face isn't the worst.</label>
-        <select class="form-control" datawidth="auto" id="q2">
-        <option value="1">1 (strongly NOPE)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (strongly YEP)</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <h3>Question 3</h3>    
-        <label for="q3">Some have called you "real weird".</label>
-        <select class="form-control" datawidth="auto" id="q3">
-        <option value="1">1 (strongly NOPE)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (strongly YEP)</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <h3>Question 4</h3>
-        <label for="q4">Your grandma is your biggest fan.</label>
-        <select class="form-control" datawidth="auto" id="q4">
-        <option value="1">1 (strongly NOPE)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (strongly YEP)</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <h3>Question 5</h3>
-        <label for="q5">You are a vampire.</label>
-        <select class="form-control" datawidth="auto" id="q5">
-        <option value="1">1 (strongly NOPE)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (strongly YEP)</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <h3>Question 6</h3>
-        <label for="q6">You live in someone's basement.</label>
-        <select class="form-control" datawidth="auto" id="q6">
-        <option value="1">1 (strongly NOPE)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (strongly YEP)</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <h3>Question 7</h3>
-        <label for="q7">Your middle name is Elmer.</label>
-        <select class="form-control" datawidth="auto" id="q7">
-        <option>1 (strongly NOPE)</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5 (strongly YEP)</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <h3>Question 8</h3>
-        <label for="q8">You've been called a hipster.</label>
-        <select class="form-control" datawidth="auto" id="q8">
-        <option value="1">1 (strongly NOPE)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (strongly YEP)</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <h3>Question 9</h3>
-        <label for="q9">You don't know what a hipster is?</label>
-        <select class="form-control" datawidth="auto" id="q9">
-        <option value="1">1 (strongly NOPE)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (strongly YEP)</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <h3>Question 10</h3>
-        <label for="q10">You have all your teeth.</label>
-        <select class="form-control" datawidth="auto" id="q10">
-        <option value="1">1 (strongly NOPE)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (strongly YEP)</option>
-        </select>
-    </div>
+        <option value="5">5 (Strongly Agree)</option>
+    </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
 
-    </div>
+<h3><strong>Question 2</strong></h3>
+    <h4 id="q2">Your face isn't the worst.</h4>
+        <select data-placeholder="" class="chosen-select" id="q2" style="display: none;">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+<h3><strong>Question 3</strong></h3>
+    <h4 id="q3">Some have called you "real weird."</h4>
+        <select data-placeholder="" class="chosen-select" id="q3" style="display: none;">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+<h3><strong>Question 4</strong></h3>
+    <h4 id="q4">Grandma is your biggest fan.</h4>
+        <select data-placeholder="" class="chosen-select" id="q4" style="display: none;">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+<h3><strong>Question 5</strong></h3>
+    <h4 id="q5">You are a vampire.</h4>
+        <select data-placeholder="" class="chosen-select" id="q5" style="display: none;">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+<h3><strong>Question 6</strong></h3>
+    <h4 id="q6">You currently live in a basement.</h4>
+        <select data-placeholder="" class="chosen-select" id="q6" style="display: none;">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+<h3><strong>Question 7</strong></h3>
+    <h4 id="q7">Your middle name is Elmer.</h4>
+        <select data-placeholder="" class="chosen-select" id="q7" style="display: none;">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+<h3><strong>Question 8</strong></h3>
+    <h4 id="q8">You've been labeled as a hipster before.</h4>
+        <select data-placeholder="" class="chosen-select" id="q8" style="display: none;">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+<h3><strong>Question 9</strong></h3>
+    <h4 id="q9">What's a hipster?</h4>
+        <select data-placeholder="" class="chosen-select" id="q9" style="display: none;">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+<h3><strong>Question 10</strong></h3>
+    <h4 id="q10">You have all your teeth.</h4>
+        <select data-placeholder="" class="chosen-select" id="q10" style="display: none;">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+
+</div>
     <button class="submit" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#match">Submit</button>
         <br>
         <br>
@@ -170,7 +169,7 @@
               <img id="imgOfMatch" src="">
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal">Close</button>
             </div>
           </div>
       
