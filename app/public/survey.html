@@ -200,30 +200,21 @@ $("#submit").on("click", function(event) {
 		name: $("#name").val(),
 		photo: $("#photo").val(),
 		scores:[$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
-		};
+		}
 
         newUser.scores.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
     
-        $.post("/api/friends", newUser, function(data) {
-		// Grab the URL of the website
-        var userURL = window.location.origin;
-        // AJAX post the data to the friends API. 
         $.post(userURL + "/api/friends", newUser, function(data){
             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
             $("#nameOfMatch").text(data.name);
             $('#imgOfMatch').attr("src", data.photo);
             // Show the modal with the best match 
             $("#modalResults").modal('toggle');
-});
 
         });
-
+    })
 
 </script>
 
 </body>
 </html>
-
-
-
-

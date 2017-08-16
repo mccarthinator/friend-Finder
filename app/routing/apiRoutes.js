@@ -9,50 +9,52 @@ module.exports = function(app) {
     res.json(friendsArray);
   });
 
-   //this takes in the incoming data from survey
-  app.post("/api/friends", function(req, res) {
-    var newPerson = req.body;
-    newPerson.scores = newPerson.scores.map(Number);
-    var numScore = [];
-    var matches = [];
-    for(i=0; i<friendScore.length;i++) {
-      numScore.push(parseInt(friendScore[i]));
-    }
+  
+app.post("/api/tables", function(req,res) {
+  var rawFriend = req.body;
+  var rawScore = rawFriend.scores
+  var numScore = [];
+  var matches = [];
+  for(i=0; i<rawScore.length;i++) {
+    numScore.push(parseInt(rawScore[i]));
+  }
 
-    console.log(numScore);
+  console.log(numScore);
 
 
 
 totalDiff = 0;
-    for(i=0; i<friends.length; i++) {
-      console.log(friends[i].scores);
-      console.log(numScore);
-        for(f=0; f<friends[i].scores.length; f++) {
-            diffScore = Math.abs(friends[i].scores[f] - numScore[f]);
-          
-          console.log(diffScore);
-          totalDiff += diffScore
+  for(i=0; i<friendsArray.length; i++) {
+    console.log(friendsArray[i].scores);
+    console.log(numScore);
+      for(j=0; j<friendsArray[i].scores.length; j++) {
+          diffScore = Math.abs(friendsArray[i].scores[j] - numScore[j]);
+        
+        console.log(diffScore);
+        totalDiff += diffScore
 
-        }
+      }
 
-      matches.push({
-        name: friends[i].name,
-        photo: friends[i].photo,
-        totaldiff: totalDiff});
-        console.log(totalDiff);
-        totalDiff = 0
-        }
+    matches.push({
+      name: friendsArray[i].name,
+      photo: friendsArray[i].photo,
+      totaldiff: totalDiff});
+      console.log(totalDiff);
+      totalDiff = 0
+      }
 
-       console.log(matches);
-       matches.sort(function(a,b) {
-      return a.totaldiff - b.totaldiff;
-       });
+     console.log(matches);
+     matches.sort(function(a,b) {
+    return a.totaldiff - b.totaldiff;
+     });
 
 
-    match = JSON.stringify(matches[0]);
-    res.json(match);
+  match = JSON.stringify(matches[0]);
+  res.json(match);
 
 });
+
+
 
 
 };
