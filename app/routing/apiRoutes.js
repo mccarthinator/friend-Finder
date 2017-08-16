@@ -11,8 +11,8 @@ module.exports = function(app) {
 
    //this takes in the incoming data from survey
   app.post("/api/friends", function(req, res) {
-    var friendTotal = req.body;
-    var friendScore = friendTotal.scores
+    var newPerson = req.body;
+    newPerson.scores = newPerson.scores.map(Number);
     var numScore = [];
     var matches = [];
     for(i=0; i<friendScore.length;i++) {

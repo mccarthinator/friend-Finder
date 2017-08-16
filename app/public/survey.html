@@ -17,12 +17,6 @@
 </head>
 <body>
 
-<!-- background img -->
-<div class="view">
-    <div class="full-bg-img flex-center">
-    </div>
-</div>
-
 <!-- survery div -->
 <div class="container">
         
@@ -190,46 +184,39 @@
 ///// function to take in user survey data once user hits submit /////
 
 $("#submit").on("click", function(event) {
-			event.preventDefault();
-			var q1 = parseInt($("#q1").val().trim());
-			var q2 = parseInt($("#q2").val().trim());
-			var q3 = parseInt($("#q3").val().trim());
-			var q4 = parseInt($("#q4").val().trim());
-			var q5 = parseInt($("#q5").val().trim());
-			var q6 = parseInt($("#q6").val().trim());
-			var q7 = parseInt($("#q7").val().trim());
-			var q8 = parseInt($("#q8").val().trim());
-			var q9 = parseInt($("#q9").val().trim());
-			var q10 = parseInt($("#q10").val().trim());
+    event.preventDefault();
+    var q1 = parseInt($("#q1").val().trim());
+    var q2 = parseInt($("#q2").val().trim());
+    var q3 = parseInt($("#q3").val().trim());
+    var q4 = parseInt($("#q4").val().trim());
+    var q5 = parseInt($("#q5").val().trim());
+    var q6 = parseInt($("#q6").val().trim());
+    var q7 = parseInt($("#q7").val().trim());
+    var q8 = parseInt($("#q8").val().trim());
+    var q9 = parseInt($("#q9").val().trim());
+    var q10 = parseInt($("#q10").val().trim());
         
        var newUser = {
-		name: $("#name").val().trim(),
-		photo: $("#photo").val().trim(),
-		scores:[]
+		name: $("#name").val(),
+		photo: $("#photo").val(),
+		scores:[$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
 		};
 
-	    newUser.scores.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
+        newUser.scores.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
     
         $.post("/api/friends", newUser, function(data) {
-		var result = JSON.parse(data);
-		var $img = $("<img>", {src: result.photo, alt: result.name});
-		$("#matchbody").html(result.name).append("<br>").append($img);
-		//clear form
-		$("#name").val("");
-		$("#photo").val("");
-		$("#q1").val(0);
-		$("#q2").val(0);
-		$("#q3").val(0);
-		$("#q4").val(0);
-		$("#q5").val(0);
-		$("#q6").val(0);
-		$("#q7").val(0);
-		$("#q8").val(0);
-		$("#q9").val(0);
-		$("#q10").val(0);
-	});
+		// Grab the URL of the website
+        var userURL = window.location.origin;
+        // AJAX post the data to the friends API. 
+        $.post(userURL + "/api/friends", newUser, function(data){
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+            $("#nameOfMatch").text(data.name);
+            $('#imgOfMatch').attr("src", data.photo);
+            // Show the modal with the best match 
+            $("#modalResults").modal('toggle');
 });
 
+        });
 
 
 </script>
