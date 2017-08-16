@@ -1,5 +1,5 @@
 // API Routes
-
+var path = require("path");
 var friendsArray = require("../data/friends.js");
 
 module.exports = function(app) {
@@ -11,21 +11,48 @@ module.exports = function(app) {
 
    //this takes in the incoming data from survey
   app.post("/api/friends", function(req, res) {
-    var newUser = req.body;
-    //this needs to change their answers into number values
-    // newUser.scores = newUser.scores.??? 
-    console.log(newUser);
-  });
-    ///// next, need to calculate absolute value difference between user scores ////
-    function findAbsoluteValue(){
-    };
+    var friendTotal = req.body;
+    var friendScore = friendTotal.scores
+    var numScore = [];
+    var matches = [];
+    for(i=0; i<friendScore.length;i++) {
+      numScore.push(parseInt(friendScore[i]));
+    }
 
-    // find lowest absolute value score ////
-    var lowestAbsVal = "";
-}
+    console.log(numScore);
 
-    //// need a function that adds new user to the friendsArray
 
-    ////need a function that returns the user which has lowest abs value score to the modal //////
 
-    ///call that function ^ ///
+totalDiff = 0;
+    for(i=0; i<friends.length; i++) {
+      console.log(friends[i].scores);
+      console.log(numScore);
+        for(f=0; f<friends[i].scores.length; f++) {
+            diffScore = Math.abs(friends[i].scores[f] - numScore[f]);
+          
+          console.log(diffScore);
+          totalDiff += diffScore
+
+        }
+
+      matches.push({
+        name: friends[i].name,
+        photo: friends[i].photo,
+        totaldiff: totalDiff});
+        console.log(totalDiff);
+        totalDiff = 0
+        }
+
+       console.log(matches);
+       matches.sort(function(a,b) {
+      return a.totaldiff - b.totaldiff;
+       });
+
+
+    match = JSON.stringify(matches[0]);
+    res.json(match);
+
+});
+
+
+};

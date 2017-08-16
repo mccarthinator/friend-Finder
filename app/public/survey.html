@@ -150,15 +150,13 @@
         </select>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
-        Find me a friend, CTAFYOF app!</button>
-    <br>
-    <br>
-</div>
-</form>
+    </div>
+    <button class="submit" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#match">Submit</button>
+        <br>
+        <br>
 
 <!-- Modal -->
-<div id="friendModal" class="modal fade" role="dialog">
+<div id="match" class="modal fade" role="dialog">
         <div class="modal-dialog">
       
           <!-- Modal content-->
@@ -168,7 +166,7 @@
               <h4 class="modal-title">Most Compatible Friend:</h4>
             </div>
             <div class="modal-body">
-              <h2 id="nameOfMatch"></h2>
+              <h2 id="nameOfMatch">Name: </h2>
               <img id="imgOfMatch" src="">
             </div>
             <div class="modal-footer">
