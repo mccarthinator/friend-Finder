@@ -10,7 +10,7 @@ module.exports = function(app) {
   });
 
   
-app.post("/api/tables", function(req,res) {
+app.post("/api/friends", function(req,res) {
   var rawFriend = req.body;
   var rawScore = rawFriend.scores
   var numScore = [];
