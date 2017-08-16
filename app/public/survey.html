@@ -204,7 +204,7 @@ $("#submit").on("click", function(event) {
 
         newUser.scores.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
     
-        $.post(userURL + "/api/friends", newUser, function(data){
+        $.post("/api/friends", newUser, function(data){
             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
             $("#nameOfMatch").text(data.name);
             $('#imgOfMatch').attr("src", data.photo);
