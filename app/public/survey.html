@@ -36,10 +36,10 @@
  <!-- 10 questions -->
  
 <h3><strong>Question 1</strong></h3>
-<h4 id="q1">You enjoy a high quality chat.</h4>
+<h4>You enjoy a high quality chat.</h4>
     <select data-placeholder="" class="chosen-select" id="q1">
         <option value="">Select a number</option>
-        <option value="1">1 (Strongly Disagree)</option>
+        <option value="1" selected="selected">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
@@ -47,10 +47,10 @@
      </select>
 
 <h3><strong>Question 2</strong></h3>
-    <h4 id="q2">Your face isn't the worst.</h4>
+    <h4>Your face isn't the worst.</h4>
         <select data-placeholder="" class="chosen-select" id="q2">
             <option value="">Select a number</option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -58,10 +58,10 @@
         </select>
 
 <h3><strong>Question 3</strong></h3>
-    <h4 id="q3">Some have called you "real weird."</h4>
+    <h4>Some have called you "real weird."</h4>
         <select data-placeholder="" class="chosen-select" id="q3">
             <option value="">Select a number</option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -69,10 +69,10 @@
          </select>
 
 <h3><strong>Question 4</strong></h3>
-    <h4 id="q4">Grandma is your biggest fan.</h4>
+    <h4>Grandma is your biggest fan.</h4>
         <select data-placeholder="" class="chosen-select" id="q4">
             <option value="">Select a number</option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -80,10 +80,10 @@
          </select>
 
 <h3><strong>Question 5</strong></h3>
-    <h4 id="q5">You are a vampire.</h4>
+    <h4>You are a vampire.</h4>
         <select data-placeholder="" class="chosen-select" id="q5">
             <option value="">Select a number</option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -91,10 +91,10 @@
          </select>
 
 <h3><strong>Question 6</strong></h3>
-    <h4 id="q6">You currently live in a basement.</h4>
+    <h4>You currently live in a basement.</h4>
         <select data-placeholder="" class="chosen-select" id="q6">
             <option value="">Select a number</option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -102,10 +102,10 @@
          </select>
 
 <h3><strong>Question 7</strong></h3>
-    <h4 id="q7">Your middle name is Elmer.</h4>
+    <h4>Your middle name is Elmer.</h4>
         <select data-placeholder="" class="chosen-select" id="q7">
             <option value="">Select a number</option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -113,10 +113,10 @@
          </select>
 
 <h3><strong>Question 8</strong></h3>
-    <h4 id="q8">You've been labeled as a hipster before.</h4>
+    <h4>You've been labeled as a hipster before.</h4>
         <select data-placeholder="" class="chosen-select" id="q8">
             <option value="">Select a number</option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -124,10 +124,10 @@
         </select>
 
 <h3><strong>Question 9</strong></h3>
-    <h4 id="q9">What's a hipster?</h4>
+    <h4>What's a hipster?</h4>
         <select data-placeholder="" class="chosen-select" id="q9">
             <option value="">Select a number</option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -135,10 +135,9 @@
         </select>
 
 <h3><strong>Question 10</strong></h3>
-    <h4 id="q10">You have all your teeth.</h4>
+    <h4>You have all your teeth.</h4>
         <select data-placeholder="" class="chosen-select" id="q10">
-            <option value="">Select a number</option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -199,19 +198,10 @@ $("#submit").on("click", function(event) {
        var newUser = {
 		name: $("#name").val(),
 		photo: $("#photo").val(),
-		scores:[$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
+		scores:[q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
 		}
-
-        newUser.scores.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
     
-        $.post("/api/friends", newUser, function(data){
-            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-            $("#nameOfMatch").text(data.name);
-            $('#imgOfMatch').attr("src", data.photo);
-            // Show the modal with the best match 
-            $("#modalResults").modal('toggle');
-
-        });
+        $.post("/api/friends", newUser);
     })
 
 </script>
